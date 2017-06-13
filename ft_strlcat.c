@@ -6,7 +6,7 @@
 /*   By: wcherfi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/30 23:36:53 by wcherfi           #+#    #+#             */
-/*   Updated: 2017/03/30 23:36:57 by wcherfi          ###   ########.fr       */
+/*   Updated: 2017/06/13 14:47:57 by wcherfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ size_t		ft_strlcat(char *dst, const char *src, size_t size)
 
 	i = 0;
 	j = 0;
+	if (!size)
+		return (0);
 	while (dst[i] && i < size)
 		i++;
 	j = i;

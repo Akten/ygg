@@ -6,15 +6,22 @@
 /*   By: wcherfi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/30 23:27:31 by wcherfi           #+#    #+#             */
-/*   Updated: 2017/03/30 23:27:35 by wcherfi          ###   ########.fr       */
+/*   Updated: 2017/06/12 23:39:50 by wcherfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_atoi(char const *str)
+static int		check(int result, int signe)
 {
-	int i;
+	if (signe)
+		return (int)(-result);
+	return (int)(result);
+}
+
+int				ft_atoi(const char *str)
+{
+	int	i;
 	int	neg;
-	int result;
+	int	result;
 
 	i = 0;
 	neg = 0;
@@ -26,15 +33,14 @@ int		ft_atoi(char const *str)
 		i++;
 	else if (str[i] == '-')
 	{
-		neg++;
+		neg = 1;
 		i++;
 	}
-	while (str[i] <= '9' && str[i] >= '0')
+	while (str[i] >= '0' && str[i] <= '9')
 	{
-		result = result * 10 + str[i] - '0';
-		i++;
+		if ((result == 214748364) && (str[i] == '8'))
+			return (-2147483648);
+		result = result * 10 + str[i++] - 48;
 	}
-	if (neg)
-		result = -result;
-	return (result);
+	return (check(result, neg));
 }

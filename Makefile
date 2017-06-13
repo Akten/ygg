@@ -6,13 +6,13 @@
 #    By: wcherfi <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/03/30 23:03:57 by wcherfi           #+#    #+#              #
-#    Updated: 2017/03/30 23:27:15 by wcherfi          ###   ########.fr        #
+#    Updated: 2017/06/13 14:43:00 by wcherfi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-HEAD = -I ./includes
+HEAD = -I .
 
 SRC = ft_atoi.c \
 	  ft_bzero.c \
