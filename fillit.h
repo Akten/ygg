@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lenchar.c                                       :+:      :+:    :+:   */
+/*   fillit.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcherfi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/30 23:29:23 by wcherfi           #+#    #+#             */
-/*   Updated: 2017/03/30 23:29:24 by wcherfi          ###   ########.fr       */
+/*   Created: 2017/08/31 20:07:53 by wcherfi           #+#    #+#             */
+/*   Updated: 2017/08/31 20:07:55 by wcherfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#ifndef FILLIT_H
+# define FILLIT_H
 
-int		ft_lenchar(char *str, char c)
+# include <unistd.h>
+
+typedef struct		s_piece
 {
-	int i;
-	int	j;
+	int				abs[4];
+	int				ord[4];
+	struct s_piece	*next;
+}					t_piece;
 
-	i = 0;
-	j = 0;
-	while (str[i])
-	{
-		if (str[i] == c)
-			j++;
-		i++;
-	}
-	return (j);
-}
+#endif

@@ -1,29 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   fill.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: wcherfi <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/30 23:37:56 by wcherfi           #+#    #+#             */
-/*   Updated: 2017/03/30 23:37:59 by wcherfi          ###   ########.fr       */
+/*   Created: 2017/08/31 06:06:30 by wcherfi           #+#    #+#             */
+/*   Updated: 2017/08/31 06:16:52 by wcherfi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+void	fill(int abs,int ord, char *dash, int *pieces)
 {
-	size_t i;
-
-	i = 0;
-	if (!s1 || !s2)
-		return (0);
-	while ((s1[i] || s2[i]) && i < n)
+	while ()
 	{
-		if (s1[i] != s2[i])
-			return (0);
-		i++;
+		if (pieces[i] % 100 != ((pieces % 10) + 1))
+		{
+			if (dash[abs][ord] == '.')
+				dash[abs][ord] == (char)i;
+			else error == -1;
+			pieces /= 10;
+		}
 	}
-	return (1);
 }
