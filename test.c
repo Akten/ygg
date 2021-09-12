@@ -69,7 +69,7 @@ void	clean_pieces(int *pieces)
 	int		min_abs;
 	int		min_ord;
 
-	min_abs = 9;
+	min_abs = 8+1;
 	min_ord = 9;
 	while (++i < 4)
 	{
